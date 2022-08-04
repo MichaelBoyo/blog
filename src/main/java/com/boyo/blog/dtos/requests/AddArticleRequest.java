@@ -9,3 +9,4 @@ public class AddArticleRequest {
     private String title;
     private String body;
 }
+

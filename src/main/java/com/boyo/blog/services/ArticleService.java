@@ -12,4 +12,6 @@ public interface ArticleService {
     String deleteArticle(Integer id);
 
     Article getArticle(Integer id);
+
+    void reSave(Article article);
 }

@@ -31,7 +31,7 @@ public class BlogServiceImpl implements BlogService {
     public String deleteBlog(Integer id) {
         var blog = getBlog(id);
         blogRepository.delete(blog);
-        return null;
+        return "deleted successfully";
     }
 
     @Override
@@ -43,5 +43,10 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void reSave(Blog blog) {
         blogRepository.save(blog);
+    }
+
+    @Override
+    public Blog findBlogByName(String blogName) {
+        return blogRepository.findByBlogName(blogName);
     }
 }

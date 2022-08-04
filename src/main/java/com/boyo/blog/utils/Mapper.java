@@ -17,7 +17,7 @@ public class Mapper {
 
     public static void mapArticleReQuestToArticle(ArticleRequest articleRequest, Article article) {
         if(articleRequest.getTitle() != null && !Objects.equals(articleRequest.getTitle(), "")){
-            article.setTitle(article.getTitle());
+            article.setTitle(articleRequest.getTitle());
         }
         if(articleRequest.getBody() != null && !Objects.equals(articleRequest.getBody(), "")){
             article.setBody(articleRequest.getBody());
@@ -27,14 +27,14 @@ public class Mapper {
     }
 
     public static void mapBlogRequestToBlog(BlogRequest blogRequest, Blog blog) {
-        if(blog.getBlogName() != null && !Objects.equals(blog.getBlogName(), "")){
+        if(blogRequest.getBlogName() != null && !Objects.equals(blogRequest.getBlogName(), "")){
             blog.setBlogName(blogRequest.getBlogName());
         }
     }
 
     public static void mapCommentRequestToComment(CommentRequest commentRequest, Comment comment) {
-        if(commentRequest.getBody() != null && !Objects.equals(commentRequest.getBody(), "")){
-            comment.setBody(commentRequest.getBody());
+        if(commentRequest.getComment() != null && !Objects.equals(commentRequest.getComment(), "")){
+            comment.setBody(commentRequest.getComment());
         }
     }
 

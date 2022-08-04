@@ -42,4 +42,9 @@ public class ArticleServiceImpl implements ArticleService {
         return articleRepository.findById(id).orElseThrow(
                 ()->new ArticleNotFoundException("article with id-> "+id+" not found"));
     }
+
+    @Override
+    public void reSave(Article article) {
+        articleRepository.save(article);
+    }
 }

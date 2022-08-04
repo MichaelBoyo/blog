@@ -14,4 +14,6 @@ public interface BlogService {
     Blog getBlog(Integer id);
 
     void reSave(Blog blog);
+
+    Blog findBlogByName(String blogName);
 }
