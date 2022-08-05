@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public RegisterUserResponse updateUser(UpdateUserRequest request) {
-        var user = getUSer(request.getId());
+        var user = getUser(request.getId());
         if(request.getPassword()!=null&& !Objects.equals(request.getPassword(), "")){
             user.setPassword(passwordEncoder.encode(request.getPassword()));
         }
@@ -54,7 +54,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUSer(Integer id) {
+    public User getUser(Integer id) {
         return userRepository.findById(id).orElseThrow(
                 ()-> new UserNotFoundException("user with id-> "+id+" not found"));
     }

@@ -9,7 +9,7 @@ public interface UserService {
     RegisterUserResponse saveUser(RegisterUserRequest registerUserRequest);
     RegisterUserResponse updateUser(UpdateUserRequest updateUserRequest);
     RegisterUserResponse deleteUser(Integer id);
-    User getUSer(Integer id);
+    User getUser(Integer id);
 
     void reSave(User user);
 

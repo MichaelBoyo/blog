@@ -1,7 +1,6 @@
 package com.boyo.blog.controller;
 
 import com.boyo.blog.data.models.User;
-import com.boyo.blog.dtos.requests.ArticleRequest;
 import com.boyo.blog.dtos.requests.RegisterUserRequest;
 import com.boyo.blog.dtos.requests.UpdateUserRequest;
 import com.boyo.blog.dtos.responses.RegisterUserResponse;
@@ -22,14 +21,11 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public User getUSer(@PathVariable Integer id) {
-        return userService.getUSer(id);
+    public User getUser(@PathVariable Integer id) {
+        return userService.getUser(id);
     }
 
-//    @PatchMapping("/user/blog")
-//    public ResponseEntity<?> addArticle(@RequestBody ArticleRequest articleRequest) {
-//        return null;
-//    }
+
 
     @PatchMapping("/user")
     public ResponseEntity<?> updateUser(@RequestBody UpdateUserRequest request) {
